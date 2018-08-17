@@ -8,7 +8,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import yuma140902.miningmod.blocks.CompressCobblestoneBlock;
+import yuma140902.miningmod.blocks.CompressDirtBlock;
 import yuma140902.miningmod.blocks.ItemCompressCobblestoneBlock;
+import yuma140902.miningmod.blocks.ItemCompressDirtBlock;
 
 @Mod(modid = MiningMod.MOD_ID, useMetadata = true)
 public class MiningMod {
@@ -36,6 +38,7 @@ public class MiningMod {
 	public static MiningMod INSTANCE;
 	
 	public static Block compressCobblestoneBlock;
+	public static Block compressDirtBlock;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -48,6 +51,11 @@ public class MiningMod {
 		    .setBlockName("blockCompressCobblestone")
 		    .setBlockTextureName(MiningMod.MOD_ID + ":" + "compress_cobblestone");
 		GameRegistry.registerBlock(compressCobblestoneBlock, ItemCompressCobblestoneBlock.class, "blockCompressCobbleStone");
+		
+		compressDirtBlock = new CompressDirtBlock()
+				.setBlockName("blockCompressDirt")
+				.setBlockTextureName(MOD_ID + ":" + "compress_dirt_block");
+		GameRegistry.registerBlock(compressDirtBlock, ItemCompressDirtBlock.class, "blockCompressDirt");
 	}
 	
 	@EventHandler
