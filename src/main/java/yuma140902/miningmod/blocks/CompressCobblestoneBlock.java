@@ -18,10 +18,10 @@ public class CompressCobblestoneBlock extends Block {
 	public CompressCobblestoneBlock() {
 		super(Material.rock);
 		this.setCreativeTab(MiningMod.MOD_CREATIVETAB);
-		this.setHardness(5.0F);
-		this.setResistance(10.0F);
-		this.setStepSound(Block.soundTypeMetal);
-		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(2.0F);
+		this.setResistance(30.0F);
+		this.setStepSound(Block.soundTypeStone);
+		this.setHarvestLevel("pickaxe", 1);
 		this.setLightLevel(0.0F);
 	}
 	
