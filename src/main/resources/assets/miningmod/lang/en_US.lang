@@ -18,4 +18,20 @@ tile.blockCompressCobblestone.15.name=x4294967296 Cobble Stone
 
 itemGroup.miningmod=MiningMod
 
+text.stonepickaxe.0.stackname=Compressed Stone Pickaxe (Tier1)
+text.stonepickaxe.1.stackname=Compressed Stone Pickaxe (Tier2)
+text.stonepickaxe.2.stackname=Compressed Stone Pickaxe (Tier3)
+text.stonepickaxe.3.stackname=Compressed Stone Pickaxe (Tier4)
+text.stonepickaxe.4.stackname=Compressed Stone Pickaxe (Tier5)
+text.stonepickaxe.5.stackname=Compressed Stone Pickaxe (Tier6)
+text.stonepickaxe.6.stackname=Compressed Stone Pickaxe (Tier7)
+text.stonepickaxe.7.stackname=Compressed Stone Pickaxe (Tier8)
+text.stonepickaxe.8.stackname=Compressed Stone Pickaxe (Tier9)
+text.stonepickaxe.9.stackname=Compressed Stone Pickaxe (Tier10)
+text.stonepickaxe.10.stackname=Compressed Stone Pickaxe (Tier11)
+text.stonepickaxe.11.stackname=Compressed Stone Pickaxe (Tier12)
+text.stonepickaxe.12.stackname=Compressed Stone Pickaxe (Tier13)
+text.stonepickaxe.13.stackname=Compressed Stone Pickaxe (Tier14)
+text.stonepickaxe.14.stackname=Compressed Stone Pickaxe (Tier15)
+text.stonepickaxe.15.stackname=Compressed Stone Pickaxe (Tier16)
 text.cirno.text=⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨

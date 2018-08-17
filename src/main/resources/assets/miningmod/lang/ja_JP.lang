@@ -18,4 +18,20 @@ tile.blockCompressCobblestone.15.name=4294967296倍圧縮丸石
 
 itemGroup.miningmod=MiningMod
 
+text.stonepickaxe.0.stackname=圧縮丸石のツルハシ (Tier1)
+text.stonepickaxe.1.stackname=圧縮丸石のツルハシ (Tier2)
+text.stonepickaxe.2.stackname=圧縮丸石のツルハシ (Tier3)
+text.stonepickaxe.3.stackname=圧縮丸石のツルハシ (Tier4)
+text.stonepickaxe.4.stackname=圧縮丸石のツルハシ (Tier5)
+text.stonepickaxe.5.stackname=圧縮丸石のツルハシ (Tier6)
+text.stonepickaxe.6.stackname=圧縮丸石のツルハシ (Tier7)
+text.stonepickaxe.7.stackname=圧縮丸石のツルハシ (Tier8)
+text.stonepickaxe.8.stackname=圧縮丸石のツルハシ (Tier9)
+text.stonepickaxe.9.stackname=圧縮丸石のツルハシ (Tier10)
+text.stonepickaxe.10.stackname=圧縮丸石のツルハシ (Tier11)
+text.stonepickaxe.11.stackname=圧縮丸石のツルハシ (Tier12)
+text.stonepickaxe.12.stackname=圧縮丸石のツルハシ (Tier13)
+text.stonepickaxe.13.stackname=圧縮丸石のツルハシ (Tier14)
+text.stonepickaxe.14.stackname=圧縮丸石のツルハシ (Tier15)
+text.stonepickaxe.15.stackname=圧縮丸石のツルハシ (Tier16)
 text.cirno.text=あたいったら最強ね!
