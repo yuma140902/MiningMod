@@ -1,5 +1,7 @@
 /build/
 /.settings/
+/.classpath
+/.project
 /.gradle/
 /resource_tmp/
 /home/*
