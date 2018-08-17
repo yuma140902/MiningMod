@@ -54,7 +54,7 @@ public class MiningMod {
 		
 		compressDirtBlock = new CompressDirtBlock()
 				.setBlockName("blockCompressDirt")
-				.setBlockTextureName(MOD_ID + ":" + "compress_dirt_block");
+				.setBlockTextureName(MOD_ID + ":" + "compress_dirt");
 		GameRegistry.registerBlock(compressDirtBlock, ItemCompressDirtBlock.class, "blockCompressDirt");
 	}
 	
