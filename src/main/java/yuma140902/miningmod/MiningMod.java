@@ -7,10 +7,12 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import yuma140902.miningmod.blocks.CompressCobblestoneBlock;
 import yuma140902.miningmod.blocks.CompressDirtBlock;
 import yuma140902.miningmod.blocks.ItemCompressCobblestoneBlock;
 import yuma140902.miningmod.blocks.ItemCompressDirtBlock;
+import yuma140902.miningmod.items.CompressStonePickaxeTier1;
 
 @Mod(modid = MiningMod.MOD_ID, useMetadata = true)
 public class MiningMod {
@@ -39,6 +41,7 @@ public class MiningMod {
 	
 	public static Block compressCobblestoneBlock;
 	public static Block compressDirtBlock;
+	public static Item compressStonePickaxeTier1;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -56,6 +59,11 @@ public class MiningMod {
 				.setBlockName("blockCompressDirt")
 				.setBlockTextureName(MOD_ID + ":" + "compress_dirt");
 		GameRegistry.registerBlock(compressDirtBlock, ItemCompressDirtBlock.class, "blockCompressDirt");
+		
+		compressStonePickaxeTier1 = new CompressStonePickaxeTier1()
+				.setUnlocalizedName("itemCompressStonePickaxeTier1")
+				.setTextureName(MOD_ID + ":" + "compress_stone_pickaxe_tier1");
+		GameRegistry.registerItem(compressStonePickaxeTier1, "itemCompressPickaxeTier1");
 	}
 	
 	@EventHandler
