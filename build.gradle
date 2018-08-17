@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "MC1.7.10_1.0.1"
+version = "MC1.7.10_1.0.2"
 group= "yuma140902.miningmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "miningmod"
 
