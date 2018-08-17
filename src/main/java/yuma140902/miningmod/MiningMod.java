@@ -20,7 +20,7 @@ public class MiningMod {
 	
 	public static final String MOD_ID = "miningmod";
 	public static final String MOD_NAME = "MiningMod";
-	public static final String MOD_VERSION = "MC1.7.10_1.0.2";
+	public static final String MOD_VERSION = "MC1.7.10_1.1.0";
 	
 	private void loadMeta(ModMetadata modMetadata) {
 		modMetadata.modId = MOD_ID;
