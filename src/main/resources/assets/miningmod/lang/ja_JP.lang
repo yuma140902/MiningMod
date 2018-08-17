@@ -15,6 +15,22 @@ tile.blockCompressCobblestone.13.name=268435456倍圧縮丸石
 tile.blockCompressCobblestone.14.name=1073741824倍圧縮丸石
 tile.blockCompressCobblestone.15.name=4294967296倍圧縮丸石
 
+tile.blockCompressDirt.0.name=4倍圧縮土
+tile.blockCompressDirt.1.name=16倍圧縮土
+tile.blockCompressDirt.2.name=64倍圧縮土
+tile.blockCompressDirt.3.name=256倍圧縮土
+tile.blockCompressDirt.4.name=1024倍圧縮土
+tile.blockCompressDirt.5.name=4096倍圧縮土
+tile.blockCompressDirt.6.name=16384倍圧縮土
+tile.blockCompressDirt.7.name=65536倍圧縮土
+tile.blockCompressDirt.8.name=262144倍圧縮土
+tile.blockCompressDirt.9.name=1048576倍圧縮土
+tile.blockCompressDirt.10.name=4194304倍圧縮土
+tile.blockCompressDirt.11.name=16777216倍圧縮土
+tile.blockCompressDirt.12.name=67108864倍圧縮土
+tile.blockCompressDirt.13.name=268435456倍圧縮土
+tile.blockCompressDirt.14.name=1073741824倍圧縮土
+tile.blockCompressDirt.15.name=4294967296倍圧縮土
 
 itemGroup.miningmod=MiningMod
 

@@ -15,6 +15,22 @@ tile.blockCompressCobblestone.13.name=x268435456 Cobble Stone
 tile.blockCompressCobblestone.14.name=x1073741824 Cobble Stone
 tile.blockCompressCobblestone.15.name=x4294967296 Cobble Stone
 
+tile.blockCompressDirt.0.name=x4 Dirt
+tile.blockCompressDirt.1.name=x16 Dirt
+tile.blockCompressDirt.2.name=x64 Dirt
+tile.blockCompressDirt.3.name=x256 Dirt
+tile.blockCompressDirt.4.name=x1024 Dirt
+tile.blockCompressDirt.5.name=x4096 Dirt
+tile.blockCompressDirt.6.name=x16384 Dirt
+tile.blockCompressDirt.7.name=x65536 Dirt
+tile.blockCompressDirt.8.name=x262144 Dirt
+tile.blockCompressDirt.9.name=x1048576 Dirt
+tile.blockCompressDirt.10.name=x4194304 Dirt
+tile.blockCompressDirt.11.name=x16777216 Dirt
+tile.blockCompressDirt.12.name=x67108864 Dirt
+tile.blockCompressDirt.13.name=x268435456 Dirt
+tile.blockCompressDirt.14.name=x1073741824 Dirt
+tile.blockCompressDirt.15.name=x4294967296 Dirt
 
 itemGroup.miningmod=MiningMod
 
