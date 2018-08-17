@@ -1,0 +1,21 @@
+tile.blockCompressCobblestone.0.name=x4 Cobble Stone
+tile.blockCompressCobblestone.1.name=x16 Cobble Stone
+tile.blockCompressCobblestone.2.name=x64 Cobble Stone
+tile.blockCompressCobblestone.3.name=x256 Cobble Stone
+tile.blockCompressCobblestone.4.name=x1024 Cobble Stone
+tile.blockCompressCobblestone.5.name=x4096 Cobble Stone
+tile.blockCompressCobblestone.6.name=x16384 Cobble Stone
+tile.blockCompressCobblestone.7.name=x65536 Cobble Stone
+tile.blockCompressCobblestone.8.name=x262144 Cobble Stone
+tile.blockCompressCobblestone.9.name=x1048576 Cobble Stone
+tile.blockCompressCobblestone.10.name=x4194304 Cobble Stone
+tile.blockCompressCobblestone.11.name=x16777216 Cobble Stone
+tile.blockCompressCobblestone.12.name=x67108864 Cobble Stone
+tile.blockCompressCobblestone.13.name=x268435456 Cobble Stone
+tile.blockCompressCobblestone.14.name=x1073741824 Cobble Stone
+tile.blockCompressCobblestone.15.name=x4294967296 Cobble Stone
+
+
+itemGroup.miningmod=MiningMod
+
+text.cirno.text=⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨⑨

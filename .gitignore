@@ -1,0 +1,5 @@
+/build/
+/.settings/
+/.gradle/
+/resource_tmp/
+/home/*
