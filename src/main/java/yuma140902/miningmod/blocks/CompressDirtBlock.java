@@ -16,11 +16,11 @@ public class CompressDirtBlock extends Block {
 	public static final int MAX = 16;
 	
 	public CompressDirtBlock() {
-		super(Material.grass);
+		super(Material.ground);
 		this.setCreativeTab(MiningMod.MOD_CREATIVETAB);
 		this.setHardness(0.5F);
 		this.setResistance(50.0F);
-		this.setStepSound(Block.soundTypeGrass);
+		this.setStepSound(Block.soundTypeGravel);
 		this.setHarvestLevel("shovel", 0);
 		this.setLightLevel(0.0F);
 	}
