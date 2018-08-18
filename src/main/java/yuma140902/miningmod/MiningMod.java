@@ -42,6 +42,8 @@ public class MiningMod {
 	public static Block compressCobblestoneBlock;
 	public static Block compressDirtBlock;
 	
+	public static MiningModEventHandler miningModEventHandler;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		loadMeta(modMetadata);
@@ -61,7 +63,8 @@ public class MiningMod {
 
 		//see: https://www.tntmodders.com/tutorial/event-1710/
 		//see: http://minecraftjp.info/modding/index.php/Minecraft_Forge_Event%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%A6%82%E8%A6%81
-		MinecraftForge.EVENT_BUS.register(MiningModEventHandler.class);
+		miningModEventHandler = new MiningModEventHandler();
+		MinecraftForge.EVENT_BUS.register(miningModEventHandler);
 	}
 	
 	@EventHandler
