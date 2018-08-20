@@ -14,7 +14,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
-public class MiningModEventHandler {
+public class PickaxeRightClickEventHandler {
 	
 	public static final int EVENT_FACE_TOP = 1;
 	public static final int EVENT_FACE_BOTTOM = 0;

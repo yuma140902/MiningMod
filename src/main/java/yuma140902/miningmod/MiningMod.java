@@ -12,7 +12,7 @@ import yuma140902.miningmod.blocks.CompressCobblestoneBlock;
 import yuma140902.miningmod.blocks.CompressDirtBlock;
 import yuma140902.miningmod.blocks.ItemCompressCobblestoneBlock;
 import yuma140902.miningmod.blocks.ItemCompressDirtBlock;
-import yuma140902.miningmod.event_handlers.MiningModEventHandler;
+import yuma140902.miningmod.event_handlers.PickaxeRightClickEventHandler;
 
 @Mod(modid = MiningMod.MOD_ID, useMetadata = true)
 public class MiningMod {
@@ -42,7 +42,7 @@ public class MiningMod {
 	public static Block compressCobblestoneBlock;
 	public static Block compressDirtBlock;
 	
-	public static MiningModEventHandler miningModEventHandler;
+	public static PickaxeRightClickEventHandler miningModEventHandler;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -63,7 +63,7 @@ public class MiningMod {
 
 		//see: https://www.tntmodders.com/tutorial/event-1710/
 		//see: http://minecraftjp.info/modding/index.php/Minecraft_Forge_Event%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%A6%82%E8%A6%81
-		miningModEventHandler = new MiningModEventHandler();
+		miningModEventHandler = new PickaxeRightClickEventHandler();
 		MinecraftForge.EVENT_BUS.register(miningModEventHandler);
 	}
 	
