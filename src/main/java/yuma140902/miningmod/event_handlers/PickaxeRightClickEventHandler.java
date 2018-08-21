@@ -155,7 +155,7 @@ public class PickaxeRightClickEventHandler {
 				return;
 			}
 		}
-		event.entityPlayer.addChatComponentMessage(new ChatComponentText("この位置に松明は置けません"));
+
 		event.setResult(Result.DEFAULT);
 		return;
 		
