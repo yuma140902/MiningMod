@@ -61,7 +61,7 @@ public class PickaxeRightClickEventHandler {
 	}
 	
 	private int getTorchInInventorySlots(EntityPlayer player) {
-		for(int i = 0; i < 35; ++i) { //インベントリはホットバーも含めて35個。ホットバーの一番左が0である。
+		for(int i = 0; i <= 35; ++i) { //インベントリはホットバーも含めて36個。ホットバーの一番左が0である。
 			ItemStack itemStack = player.inventory.getStackInSlot(i);
 			if(itemStack != null && isTorch(itemStack.getItem())) {
 				return i;
