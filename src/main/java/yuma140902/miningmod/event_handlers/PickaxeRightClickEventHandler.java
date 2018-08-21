@@ -61,7 +61,7 @@ public class PickaxeRightClickEventHandler {
 	}
 	
 	private int getTorchInInventorySlots(EntityPlayer player) {
-		for(int i = 0; i < 35; ++i) { //インベントリはホットバーも含めて35個。ホットバーの一番左が0である。
+		for(int i = 0; i <= 35; ++i) { //インベントリはホットバーも含めて36個。ホットバーの一番左が0である。
 			ItemStack itemStack = player.inventory.getStackInSlot(i);
 			if(itemStack != null && isTorch(itemStack.getItem())) {
 				return i;
@@ -114,6 +114,8 @@ public class PickaxeRightClickEventHandler {
 		}
 		
 		if(event.world.getBlock(x, y, z).isReplaceable(event.world, x, y, z)) {
+			boolean hasPlacedTorch = true;
+			
 			if(event.face == EVENT_FACE_TOP
 					&& (event.world.isSideSolid(clickedBlockX, clickedBlockY, clickedBlockZ, ForgeDirection.UP)
 							|| clickedBlock.canPlaceTorchOnTop(event.world, clickedBlockX, clickedBlockY, clickedBlockZ))) {
@@ -139,20 +141,23 @@ public class PickaxeRightClickEventHandler {
 					&& event.world.isSideSolid(clickedBlockX, clickedBlockY, clickedBlockZ, ForgeDirection.SOUTH)) {
 				event.world.setBlock(x, y, z, Blocks.torch, TORCH_META_SOUTH, 3);
 			}
-			else { //右クリックした向きと実際に設置できる向きが違う場合。
+			else if(Blocks.torch.canPlaceBlockAt(event.world, x, y, z)){ //右クリックした向きと実際に設置できる向きが違う場合。
 				event.world.setBlock(x, y, z, Blocks.torch);  //BlockTorchのonBlockPlaced()メソッドによって適切な向きにされる
 			}
+			else {
+				hasPlacedTorch = false;
+			}
 			
-			itemStack.stackSize -= 1; //松明を消費
+			if(hasPlacedTorch) {
+				itemStack.stackSize -= 1; //松明を消費
 			
-			event.setResult(Result.DENY);
-			return;
+				event.setResult(Result.DENY);
+				return;
+			}
 		}
-		else {
-			event.entityPlayer.addChatComponentMessage(new ChatComponentText("この位置に松明は置けません"));
-			event.setResult(Result.DEFAULT);
-			return;
-		}
+
+		event.setResult(Result.DEFAULT);
+		return;
 		
 	}
 }
