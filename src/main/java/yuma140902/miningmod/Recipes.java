@@ -11,6 +11,7 @@ import yuma140902.miningmod.blocks.CompressDirtBlock;
 
 public final class Recipes {
 	private Recipes() {}
+	
 	public static void register() {
 		final int COBBLESTONE_MAX = CompressCobblestoneBlock.MAX;
 		
@@ -104,5 +105,97 @@ public final class Recipes {
 					'|', Items.stick
 					);
 		}
+		
+		final int
+				PLANK_META_OAK = 0,
+				PLANK_META_ACACIA = 4,
+				PLANK_META_BIRCH = 2,
+				PLANK_META_DARKOAK = 5,
+				PLANK_META_JUNGLE = 3,
+				PLANK_META_SPRUCE = 1;
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.acacia_stairs, 2, 0),
+				" #",
+				"##",
+				'#', new ItemStack(Blocks.planks, 1, PLANK_META_ACACIA)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.birch_stairs, 2, 0),
+				" #",
+				"##",
+				'#', new ItemStack(Blocks.planks, 1, PLANK_META_BIRCH)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.dark_oak_stairs, 2, 0),
+				" #",
+				"##",
+				'#', new ItemStack(Blocks.planks, 1, PLANK_META_DARKOAK)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.jungle_stairs, 2, 0),
+				" #",
+				"##",
+				'#', new ItemStack(Blocks.planks, 1, PLANK_META_JUNGLE)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.spruce_stairs, 2, 0),
+				" #",
+				"##",
+				'#', new ItemStack(Blocks.planks, 1, PLANK_META_SPRUCE)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.oak_stairs, 2, 0),
+				" #",
+				"##",
+				'#', new ItemStack(Blocks.planks, 1, PLANK_META_OAK)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.brick_stairs, 2, 0),
+				" #",
+				"##",
+				'#', Blocks.brick_block
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.sandstone_stairs, 2, 0),
+				" #",
+				"##",
+				'#', Blocks.sandstone
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.stone_brick_stairs, 2, 0),
+				" #",
+				"##",
+				'#', Blocks.stonebrick
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.stone_stairs, 2, 0),
+				" #",
+				"##",
+				'#', Blocks.cobblestone
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.nether_brick_stairs, 2, 0),
+				" #",
+				"##",
+				'#', Blocks.nether_brick
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.quartz_stairs, 2, 0),
+				" #",
+				"##",
+				'#', Blocks.quartz_block
+				);
 	}
 }
