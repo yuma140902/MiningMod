@@ -90,17 +90,71 @@ public final class Recipes {
 		}
 		
 		
-		//== ここから圧縮ツルハシ ==//
+		//== ここから圧縮ツール ==//
 		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
 			ItemStack output = new ItemStack(Items.stone_pickaxe, 1, 0);
 			output.addEnchantment(Enchantment.efficiency, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolEfficiencyFactor));
-			output.addEnchantment(Enchantment.fortune, (meta + 1) / 2);
 			output.addEnchantment(Enchantment.unbreaking, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolUnbreakableFactor));
 			output.setStackDisplayName(StatCollector.translateToLocal("text.stonepickaxe." + meta + ".stackname"));
 			GameRegistry.addRecipe(output,
 					"###",
 					" | ",
 					" | ",
+					'#', new ItemStack(MiningMod.compressCobblestoneBlock, 1, meta),
+					'|', Items.stick
+					);
+		}
+		
+		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
+			ItemStack output = new ItemStack(Items.stone_shovel, 1, 0);
+			output.addEnchantment(Enchantment.efficiency, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolEfficiencyFactor));
+			output.addEnchantment(Enchantment.unbreaking, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolUnbreakableFactor));
+			output.setStackDisplayName(StatCollector.translateToLocal("text.stoneshovel." + meta + ".stackname"));
+			GameRegistry.addRecipe(output,
+					"#",
+					"|",
+					"|",
+					'#', new ItemStack(MiningMod.compressCobblestoneBlock, 1, meta),
+					'|', Items.stick
+					);
+		}
+		
+		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
+			ItemStack output = new ItemStack(Items.stone_axe, 1, 0);
+			output.addEnchantment(Enchantment.efficiency, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolEfficiencyFactor));
+			output.addEnchantment(Enchantment.unbreaking, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolUnbreakableFactor));
+			output.setStackDisplayName(StatCollector.translateToLocal("text.stoneaxe." + meta + ".stackname"));
+			GameRegistry.addRecipe(output,
+					"##",
+					"#|",
+					" |",
+					'#', new ItemStack(MiningMod.compressCobblestoneBlock, 1, meta),
+					'|', Items.stick
+					);
+		}
+		
+		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
+			ItemStack output = new ItemStack(Items.stone_sword, 1, 0);
+			output.addEnchantment(Enchantment.looting, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolLootingFactor));
+			output.addEnchantment(Enchantment.unbreaking, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolUnbreakableFactor));
+			output.setStackDisplayName(StatCollector.translateToLocal("text.stonesword." + meta + ".stackname"));
+			GameRegistry.addRecipe(output,
+					"#",
+					"#",
+					"|",
+					'#', new ItemStack(MiningMod.compressCobblestoneBlock, 1, meta),
+					'|', Items.stick
+					);
+		}
+		
+		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
+			ItemStack output = new ItemStack(Items.stone_hoe, 1, 0);
+			output.addEnchantment(Enchantment.unbreaking, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolUnbreakableFactor));
+			output.setStackDisplayName(StatCollector.translateToLocal("text.stonehoe." + meta + ".stackname"));
+			GameRegistry.addRecipe(output,
+					"##",
+					" |",
+					" |",
 					'#', new ItemStack(MiningMod.compressCobblestoneBlock, 1, meta),
 					'|', Items.stick
 					);

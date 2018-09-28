@@ -45,6 +45,7 @@ public class MiningMod {
 	
 	public float compressToolEfficiencyFactor;
 	public float compressToolUnbreakableFactor;
+	public float compressToolLootingFactor;
 	
 	private void loadConfig() {
 		Configuration cfg = new Configuration(new File(CONFIG_FILE_NAME));
@@ -52,6 +53,7 @@ public class MiningMod {
 			cfg.load();
 			compressToolEfficiencyFactor = cfg.getFloat("compressToolEfficiencyFactor", "tools", 1.8F, 0.0F, 100.0F, "");
 			compressToolUnbreakableFactor = cfg.getFloat("compressToolUnbreakableFactor", "tools", 1.0F, 0.0F, 100.0F, "");
+			compressToolLootingFactor = cfg.getFloat("compressToolLootingFactor", "tools", 0.5F, 0.0F, 100.0F, "");
 		}
 		finally {
 			cfg.save();
