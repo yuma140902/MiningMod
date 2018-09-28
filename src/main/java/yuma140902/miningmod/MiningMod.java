@@ -1,5 +1,6 @@
 package yuma140902.miningmod;
 
+import java.io.File;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
@@ -7,6 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraftforge.common.config.Configuration;
 import yuma140902.miningmod.blocks.CompressCobblestoneBlock;
 import yuma140902.miningmod.blocks.CompressDirtBlock;
 import yuma140902.miningmod.blocks.ItemCompressCobblestoneBlock;
@@ -21,6 +23,7 @@ public class MiningMod {
 	public static final String MOD_ID = "miningmod";
 	public static final String MOD_NAME = "MiningMod";
 	public static final String MOD_VERSION = "MC1.7.10_1.1.2";
+	public static final String CONFIG_FILE_NAME = "config\\" + MOD_NAME + ".cfg";
 	
 	private void loadMeta(ModMetadata modMetadata) {
 		modMetadata.modId = MOD_ID;
@@ -40,9 +43,25 @@ public class MiningMod {
 	public static Block compressCobblestoneBlock;
 	public static Block compressDirtBlock;
 	
+	public float compressToolEfficiencyFactor;
+	public float compressToolUnbreakableFactor;
+	
+	private void loadConfig() {
+		Configuration cfg = new Configuration(new File(CONFIG_FILE_NAME));
+		try {
+			cfg.load();
+			compressToolEfficiencyFactor = cfg.getFloat("compressToolEfficiencyFactor", "tools", 1.8F, 0.0F, 100.0F, "");
+			compressToolUnbreakableFactor = cfg.getFloat("compressToolUnbreakableFactor", "tools", 1.0F, 0.0F, 100.0F, "");
+		}
+		finally {
+			cfg.save();
+		}
+	}
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		loadMeta(modMetadata);
+		loadConfig();
 		
 		MyBlocks.register();
 		MyItems.register();

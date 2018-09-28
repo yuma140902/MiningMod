@@ -93,9 +93,9 @@ public final class Recipes {
 		//== ここから圧縮ツルハシ ==//
 		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
 			ItemStack output = new ItemStack(Items.stone_pickaxe, 1, 0);
-			output.addEnchantment(Enchantment.efficiency, (int) ((meta + 1) * 1.8));
+			output.addEnchantment(Enchantment.efficiency, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolEfficiencyFactor));
 			output.addEnchantment(Enchantment.fortune, (meta + 1) / 2);
-			output.addEnchantment(Enchantment.unbreaking, meta + 1);
+			output.addEnchantment(Enchantment.unbreaking, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolUnbreakableFactor));
 			output.setStackDisplayName(StatCollector.translateToLocal("text.stonepickaxe." + meta + ".stackname"));
 			GameRegistry.addRecipe(output,
 					"###",
