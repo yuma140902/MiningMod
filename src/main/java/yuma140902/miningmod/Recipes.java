@@ -251,5 +251,22 @@ public final class Recipes {
 				"##",
 				'#', Blocks.quartz_block
 				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.double_stone_slab, 1, 0),
+				"#",
+				"#",
+				'#', Blocks.stone_slab
+				);
+		
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(Blocks.double_stone_slab, 1, 0),
+				new ItemStack(Blocks.double_stone_slab, 1, 8)
+				);
+		
+		GameRegistry.addShapelessRecipe(
+				new ItemStack(Blocks.double_stone_slab, 1, 8),
+				new ItemStack(Blocks.double_stone_slab, 1, 0)
+				);
 	}
 }
