@@ -252,21 +252,43 @@ public final class Recipes {
 				'#', Blocks.quartz_block
 				);
 		
+		final int
+			META_SMOOTH_DOUBLE_STONE_SLAB = 8,
+			META_SMOOTH_DOUBLE_SANDSTONE_SLAB = 9,
+			META_SMOOTH_DOUBLE_NETHERQUARTZ_SLAB = 15,
+			META_DOUBLE_STONE_SLAB = 0,
+			META_SANDSTONE_SLAB = 1,
+			META_NETHERQUARTZ_SLAB = 7;
+		
 		GameRegistry.addRecipe(
-				new ItemStack(Blocks.double_stone_slab, 1, 0),
+				new ItemStack(Blocks.double_stone_slab, 1, META_DOUBLE_STONE_SLAB),
 				"#",
 				"#",
 				'#', Blocks.stone_slab
 				);
 		
 		GameRegistry.addShapelessRecipe(
-				new ItemStack(Blocks.double_stone_slab, 1, 0),
-				new ItemStack(Blocks.double_stone_slab, 1, 8)
+				new ItemStack(Blocks.double_stone_slab, 1, META_DOUBLE_STONE_SLAB),
+				new ItemStack(Blocks.double_stone_slab, 1, META_SMOOTH_DOUBLE_STONE_SLAB)
 				);
 		
 		GameRegistry.addShapelessRecipe(
-				new ItemStack(Blocks.double_stone_slab, 1, 8),
-				new ItemStack(Blocks.double_stone_slab, 1, 0)
+				new ItemStack(Blocks.double_stone_slab, 1, META_SMOOTH_DOUBLE_STONE_SLAB),
+				new ItemStack(Blocks.double_stone_slab, 1, META_DOUBLE_STONE_SLAB)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.double_stone_slab, 1, META_SMOOTH_DOUBLE_SANDSTONE_SLAB),
+				"#",
+				"#",
+				'#', new ItemStack(Blocks.stone_slab, 1, META_SANDSTONE_SLAB)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(Blocks.double_stone_slab, 1, META_SMOOTH_DOUBLE_NETHERQUARTZ_SLAB),
+				"#",
+				"#",
+				'#', new ItemStack(Blocks.stone_slab, 1, META_NETHERQUARTZ_SLAB)
 				);
 	}
 }
