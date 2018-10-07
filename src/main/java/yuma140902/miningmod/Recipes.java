@@ -279,15 +279,15 @@ public final class Recipes {
 		
 		GameRegistry.addRecipe(
 				new ItemStack(Blocks.double_stone_slab, 1, META_SMOOTH_DOUBLE_SANDSTONE_SLAB),
-				"#",
-				"#",
+				" #",
+				"# ",
 				'#', new ItemStack(Blocks.stone_slab, 1, META_SANDSTONE_SLAB)
 				);
 		
 		GameRegistry.addRecipe(
 				new ItemStack(Blocks.double_stone_slab, 1, META_SMOOTH_DOUBLE_NETHERQUARTZ_SLAB),
-				"#",
-				"#",
+				" #",
+				"# ",
 				'#', new ItemStack(Blocks.stone_slab, 1, META_NETHERQUARTZ_SLAB)
 				);
 	}
