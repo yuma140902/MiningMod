@@ -32,6 +32,12 @@ tile.blockCompressDirt.13.name=268435456倍圧縮土
 tile.blockCompressDirt.14.name=1073741824倍圧縮土
 tile.blockCompressDirt.15.name=4294967296倍圧縮土
 
+item.miningmod.wood_pickaxe=木のツルハシ (松明付き)
+item.miningmod.stone_pickaxe=石のツルハシ (松明付き)
+item.miningmod.iron_pickaxe=鉄のツルハシ (松明付き)
+item.miningmod.gold_pickaxe=金のツルハシ (松明付き)
+item.miningmod.diamond_pickaxe=ダイヤモンドのツルハシ (松明付き)
+
 itemGroup.miningmod=MiningMod
 
 text.stonepickaxe.0.stackname=圧縮丸石のツルハシ (Tier1)

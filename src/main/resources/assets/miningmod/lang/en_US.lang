@@ -32,6 +32,12 @@ tile.blockCompressDirt.13.name=x268435456 Dirt
 tile.blockCompressDirt.14.name=x1073741824 Dirt
 tile.blockCompressDirt.15.name=x4294967296 Dirt
 
+item.miningmod.wood_pickaxe=Wooden Pickaxe with Torch
+item.miningmod.stone_pickaxe=Stone Pickaxe with Torch
+item.miningmod.iron_pickaxe=Iron Pickaxe with Torch
+item.miningmod.gold_pickaxe=Gold Pickaxe with Torch
+item.miningmod.diamond_pickaxe=Diamond Pickaxe with Torch
+
 itemGroup.miningmod=MiningMod
 
 text.stonepickaxe.0.stackname=Compressed Stone Pickaxe (Tier1)
