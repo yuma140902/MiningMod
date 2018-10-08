@@ -12,9 +12,31 @@ import yuma140902.miningmod.blocks.CompressDirtBlock;
 public final class Recipes {
 	private Recipes() {}
 	
+	private static final int COBBLESTONE_MAX = CompressCobblestoneBlock.MAX;
+	private static final int DIRT_MAX = CompressDirtBlock.MAX;
+	private static final int
+			PLANK_META_OAK = 0,
+			PLANK_META_ACACIA = 4,
+			PLANK_META_BIRCH = 2,
+			PLANK_META_DARKOAK = 5,
+			PLANK_META_JUNGLE = 3,
+			PLANK_META_SPRUCE = 1;
+	private static final int
+			META_SMOOTH_DOUBLE_STONE_SLAB = 8,
+			META_SMOOTH_DOUBLE_SANDSTONE_SLAB = 9,
+			META_SMOOTH_DOUBLE_NETHERQUARTZ_SLAB = 15,
+			META_DOUBLE_STONE_SLAB = 0,
+			META_SANDSTONE_SLAB = 1,
+			META_NETHERQUARTZ_SLAB = 7;
+	
 	public static void register() {
-		final int COBBLESTONE_MAX = CompressCobblestoneBlock.MAX;
-		
+		addCompressBlockRecipes();
+		addCompressToolsRecipes();
+		addStairRecipes();
+		addSlabRecipes();
+	}
+	
+	private static void addCompressBlockRecipes() {
 		ItemStack[] compressCobblestoneBlockTmp1 = new ItemStack[COBBLESTONE_MAX];
 		for(int i = 0; i < COBBLESTONE_MAX; ++i) {
 			compressCobblestoneBlockTmp1[i] = new ItemStack(MiningMod.compressCobblestoneBlock, 1, i);
@@ -35,8 +57,6 @@ public final class Recipes {
 					);
 		}
 		
-		
-		
 		ItemStack[] compressCobblestoneBlockTmp4 = new ItemStack[COBBLESTONE_MAX];
 		for(int i = 0; i < COBBLESTONE_MAX; ++i) {
 			compressCobblestoneBlockTmp4[i]= new ItemStack(MiningMod.compressCobblestoneBlock, 4, i); 
@@ -50,9 +70,6 @@ public final class Recipes {
 					compressCobblestoneBlockTmp4[i]);
 		}
 		
-		
-		
-		final int DIRT_MAX = CompressDirtBlock.MAX;
 		
 		ItemStack[] compressDirtBlockTmp1 = new ItemStack[DIRT_MAX];
 		for(int i = 0; i < DIRT_MAX; ++i) {
@@ -88,9 +105,9 @@ public final class Recipes {
 			GameRegistry.addShapelessRecipe(compressDirtBlockTmp4[i-1], 
 					compressDirtBlockTmp4[i]);
 		}
-		
-		
-		//== ここから圧縮ツール ==//
+	}
+	
+	private static void addCompressToolsRecipes() {
 		for(int meta = 0; meta < COBBLESTONE_MAX; ++meta) {
 			ItemStack output = new ItemStack(Items.stone_pickaxe, 1, 0);
 			output.addEnchantment(Enchantment.efficiency, (int) ((meta + 1) * MiningMod.INSTANCE.compressToolEfficiencyFactor));
@@ -159,15 +176,9 @@ public final class Recipes {
 					'|', Items.stick
 					);
 		}
-		
-		final int
-				PLANK_META_OAK = 0,
-				PLANK_META_ACACIA = 4,
-				PLANK_META_BIRCH = 2,
-				PLANK_META_DARKOAK = 5,
-				PLANK_META_JUNGLE = 3,
-				PLANK_META_SPRUCE = 1;
-		
+	}
+	
+	private static void addStairRecipes() {
 		GameRegistry.addRecipe(
 				new ItemStack(Blocks.acacia_stairs, 2, 0),
 				" #",
@@ -251,15 +262,9 @@ public final class Recipes {
 				"##",
 				'#', Blocks.quartz_block
 				);
-		
-		final int
-			META_SMOOTH_DOUBLE_STONE_SLAB = 8,
-			META_SMOOTH_DOUBLE_SANDSTONE_SLAB = 9,
-			META_SMOOTH_DOUBLE_NETHERQUARTZ_SLAB = 15,
-			META_DOUBLE_STONE_SLAB = 0,
-			META_SANDSTONE_SLAB = 1,
-			META_NETHERQUARTZ_SLAB = 7;
-		
+	}
+	
+	private static void addSlabRecipes() {
 		GameRegistry.addRecipe(
 				new ItemStack(Blocks.double_stone_slab, 1, META_DOUBLE_STONE_SLAB),
 				"#",
