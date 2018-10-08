@@ -6,6 +6,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
+import net.minecraftforge.oredict.OreDictionary;
 import yuma140902.miningmod.blocks.CompressCobblestoneBlock;
 import yuma140902.miningmod.blocks.CompressDirtBlock;
 
@@ -34,6 +35,7 @@ public final class Recipes {
 		addCompressToolsRecipes();
 		addStairRecipes();
 		addSlabRecipes();
+		addTorchToolsRecipes();
 	}
 	
 	private static void addCompressBlockRecipes() {
@@ -294,6 +296,53 @@ public final class Recipes {
 				" #",
 				"# ",
 				'#', new ItemStack(Blocks.stone_slab, 1, META_NETHERQUARTZ_SLAB)
+				);
+	}
+
+	private static void addTorchToolsRecipes() {
+		GameRegistry.addRecipe(
+				new ItemStack(MyItems.torchWoodenPickaxe),
+				" t ",
+				"tpt",
+				" t ",
+				't', Blocks.torch,
+				'p', new ItemStack(Items.wooden_pickaxe, 1, OreDictionary.WILDCARD_VALUE)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(MyItems.torchStonePickaxe),
+				" t ",
+				"tpt",
+				" t ",
+				't', Blocks.torch,
+				'p', new ItemStack(Items.stone_pickaxe, 1, OreDictionary.WILDCARD_VALUE)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(MyItems.torchIronPickaxe),
+				" t ",
+				"tpt",
+				" t ",
+				't', Blocks.torch,
+				'p', new ItemStack(Items.iron_pickaxe, 1, OreDictionary.WILDCARD_VALUE)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(MyItems.torchGoldenPickaxe),
+				" t ",
+				"tpt",
+				" t ",
+				't', Blocks.torch,
+				'p', new ItemStack(Items.golden_pickaxe, 1, OreDictionary.WILDCARD_VALUE)
+				);
+		
+		GameRegistry.addRecipe(
+				new ItemStack(MyItems.torchDiamondPickaxe),
+				" t ",
+				"tpt",
+				" t ",
+				't', Blocks.torch,
+				'p', new ItemStack(Items.diamond_pickaxe, 1, OreDictionary.WILDCARD_VALUE)
 				);
 	}
 }
